@@ -1,0 +1,21 @@
+这是我们在Mininet上试验时所用的工具箱。
+This is a tool-box for our experiments/stimulations on Mininet.
+
+topo.py是一个拓扑生成工具。可以使用
+
+  'python topo.py -h xx -s yy'
+
+来生成一个新的拓扑。对于'-h'和'-s'并没有顺序要求。'-h'后的xx代表
+新拓扑中的主机数，'-s'后的yy则代表新拓扑中的交换机数量。新拓扑为
+线性，每台主机都与编号相同的交换机相连。如果主机数量多于交换机数
+量，则第n+1台主机连接到第1个交换机。
+
+topo.py is a topo-gen tool. You can use 
+  'python topo.py'
+
+to generate a new topology. There is no restrict on the order of
+'-h' and '-s'. The xx after '-h' is the number of hosts in that
+topo, and yy after '-s' the number of switches. The new topo is 
+linear topology, and each host is connect with a switch which have
+the same number. If there are more hosts than switches, then the
+(n+1)th host will connect to 1st switch.
