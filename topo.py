@@ -54,8 +54,4 @@ str(switch if i%switch == 0 else i%switch) +' )\n'
     fileHandle.write( link )
 
 fileHandle.write( "        self.enable_all()\n\n" )
-<<<<<<< HEAD
 fileHandle.write( "topos = { 'mytopo': ( lambda: MyTopo() ) }" )
-=======
-fileHandle.write( "topos = { 'mytopo': ( lambda: MyTopo() ) }" )
->>>>>>> origin/master

@@ -9,6 +9,13 @@ topo.py是一个拓扑生成工具。可以使用
 线性，每台主机都与编号相同的交换机相连。如果主机数量多于交换机数
 量，则第n+1台主机连接到第1个交换机。
 
+scp_dhcp是DHCPDISCOVER包生成代码。可以在代码中
+
+	'sendp(dhcp_disc, loop=1, inter=0.2)'
+
+调整是否循环和发送时延。其中，loop为循环控制（1=循环; 0=不循环）。
+inter为间隔时间。
+
 更多信息，请参考
 richardzhao.me
 
@@ -28,6 +35,14 @@ topo, and yy after '-s' the number of switches. The new topo is
 linear topology, and each host is connect with a switch which have
 the same number. If there are more hosts than switches, then the
 (n+1)th host will connect to 1st switch.
+
+scp_dhcp is a piece of DHCPDISCOVER packet generating code. You
+can adjust in
+
+	'sendp(dhcp_disc, loop=1, inter=0.2)'
+
+where loop=1; loop=0 are enable and disable looping. And inter
+controls the interval time between packets.
 
 for more information, please visit
 richardzhao.me
